@@ -1,6 +1,6 @@
 {
 	"name": "LethalLanFixFix",
-	"version_number": "1.0.0",
+	"version_number": "1.0.1",
 	"website_url": "https://github.com/sqbi-q/LethalLanFixFix",
 	"description": "Recreation of LethalLanFix, allowing to specify IP address for LAN Sessions",
 	"dependencies": [

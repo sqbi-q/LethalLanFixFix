@@ -45,7 +45,7 @@ public class MenuManagerPatches : MonoBehaviour
     public static void Patch_StartLAN()
     {
         var startLAN_button = GameObject.Find("Canvas/MenuContainer/MainButtons/StartLAN");
-        Debug.Log(startLAN_button);
+        //Debug.Log(startLAN_button);
 
         startLAN_button.GetComponent<Button>().onClick = new Button.ButtonClickedEvent();
         startLAN_button.GetComponent<Button>().onClick
@@ -61,9 +61,9 @@ public class MenuManagerPatches : MonoBehaviour
     public static void AddIPInputMenu()
     {
         var menu = IPInput.Create();
-        Debug.Log(menu);
+        //Debug.Log(menu);
         var menuContainer = GameObject.Find("Canvas/MenuContainer");
-        Debug.Log(menuContainer);
+        //Debug.Log(menuContainer);
         menu.transform.SetParent(menuContainer.transform);
     }
 
