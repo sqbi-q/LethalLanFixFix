@@ -1,0 +1,9 @@
+{
+	"name": "LethalLanFixFix",
+	"version_number": "1.0.0",
+	"website_url": "https://github.com/sqbi-q/LethalLanFixFix",
+	"description": "Recreation of LethalLanFix, allowing to specify IP address for LAN Sessions",
+	"dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}
