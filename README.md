@@ -15,4 +15,4 @@ and build using `dotnet`:
 cd LethalLanFixFix/
 dotnet build
 ```
-Compiled .dll is available in `bin/Debug/netstandard2.1/LethalLanFixFix.dll`.
+Compiled .dll is available in `bin/Debug/netstandard2.1/com.sqbi.lethallanfixfix.dll`.
