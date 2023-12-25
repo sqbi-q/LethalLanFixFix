@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <!-- <ProjectGuid>com.sqbi.lethallanfixfix</ProjectGuid> -->
-    <AssemblyName>LethalLanFixFix</AssemblyName>
+    <AssemblyName>com.sqbi.lethallanfixfix</AssemblyName>
+    <Product>LethalLanFixFix</Product>
     <Description>Lethal Lan Fix Fix</Description>
     <Version>1.0.1</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
