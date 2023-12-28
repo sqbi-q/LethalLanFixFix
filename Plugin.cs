@@ -66,19 +66,6 @@ public class MenuManagerPatches : MonoBehaviour
         //Debug.Log(menuContainer);
         menu.transform.SetParent(menuContainer.transform);
     }
-
-    [HarmonyPatch(typeof(MenuManager), "LAN_HostSetAllowRemoteConnections")]
-    public static class MenuManager_LAN_HostSetAllowRemoteConnections
-    {
-        [HarmonyPostfix]
-        public static void Postfix(MenuManager __instance)
-        {
-            if (Traverse.Create(__instance).Field("startingAClient").Equals(false)) return;
-
-            Debug.Log($"Listening to LAN server: {IPInput.IP_Address}");
-            NetworkManager.Singleton.GetComponent<UnityTransport>().ConnectionData.Address = IPInput.IP_Address;
-        }
-    }
 }
 
 public class IPInput : MonoBehaviour
@@ -135,6 +122,8 @@ public class IPInput : MonoBehaviour
                         IP_Address = ip_field.GetComponent<TMP_InputField>().text;
                     else 
                         IP_Address = "127.0.0.1";
+                    NetworkManager.Singleton.GetComponent<UnityTransport>().ConnectionData.Address = IP_Address;
+                    Debug.Log($"Listening to LAN server: {IP_Address}");
                     GameObject.Find("MenuManager").GetComponent<MenuManager>().StartAClient();
                 }
             );
